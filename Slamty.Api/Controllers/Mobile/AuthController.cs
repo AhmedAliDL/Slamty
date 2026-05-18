@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Slamty.Application.Auth.Command.Login;
-using Slamty.Application.Auth.Commands.Registration;
-using Slamty.Application.Auth.Commands.ResetPassword;
-using Slamty.Application.Auth.Commands.SendOTP;
-using Slamty.Application.Auth.Commands.VerifyOTP;
+using Slamty.Application.Features.Auth.Commands.ForgetPassword;
+using Slamty.Application.Features.Auth.Commands.Login;
+using Slamty.Application.Features.Auth.Commands.Registration;
+using Slamty.Application.Features.Auth.Commands.ResetPassword;
+using Slamty.Application.Features.Auth.Commands.SendOTP;
+using Slamty.Application.Features.Auth.Commands.VerifyOTP;
 
 namespace Slamty.Api.Controllers.Mobile
 {

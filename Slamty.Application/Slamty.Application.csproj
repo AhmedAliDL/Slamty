@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Slamty.Domain\Slamty.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Auth\Queries\" />
-  </ItemGroup>
-
 </Project>

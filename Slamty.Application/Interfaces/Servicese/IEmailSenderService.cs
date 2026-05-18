@@ -1,4 +1,4 @@
-﻿using Slamty.Application.Auth.Dtos;
+﻿using Slamty.Application.Features.Auth.Dtos;
 using Slamty.Application.ResponseTypes;
 
 namespace Slamty.Application.Interfaces.Servicese

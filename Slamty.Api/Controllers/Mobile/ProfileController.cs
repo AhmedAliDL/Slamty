@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Slamty.Application.Auth.Queries.GetProfile;
+using Slamty.Application.Features.UserProfile.Queries.GetProfile;
 
 namespace Slamty.Api.Controllers.Mobile
 {

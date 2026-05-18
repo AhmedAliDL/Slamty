@@ -1,7 +1,7 @@
 ﻿using MailKit.Net.Smtp;
 using Microsoft.Extensions.Configuration;
 using MimeKit;
-using Slamty.Application.Auth.Dtos;
+using Slamty.Application.Features.Auth.Dtos;
 using Slamty.Application.Interfaces.Servicese;
 using Slamty.Application.ResponseTypes;
 
