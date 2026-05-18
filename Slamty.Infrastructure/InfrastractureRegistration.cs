@@ -14,6 +14,7 @@ namespace Slamty.Infrastracture
     {
         public static void AddInfrastractureRegister(this IServiceCollection services, IConfiguration configuration)
         {
+
             services.AddDbContext<AppIdentityDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("IdentityConnection")));
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));

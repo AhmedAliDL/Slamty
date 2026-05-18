@@ -1,8 +1,12 @@
+using Microsoft.AspNetCore.Identity;
 using Scalar.AspNetCore;
 using Serilog;
 using Serilog.Events;
 using Slamty.Application;
+using Slamty.Application.Interfaces.Providers;
+using Slamty.Domain.Entities;
 using Slamty.Infrastracture;
+using Slamty.Infrastructure.Data.Identity;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -21,6 +25,12 @@ Log.Logger = new LoggerConfiguration()
 builder.Services.AddSerilog();
 builder.Services.AddControllers();
 builder.Services.AddInfrastractureRegister(builder.Configuration);
+builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
+{
+    options.Tokens.EmailConfirmationTokenProvider = "numeric-provider";
+})
+.AddEntityFrameworkStores<AppIdentityDbContext>()
+.AddTokenProvider<NumericEmailTokenProvider<AppUser>>("numeric-provider");
 builder.Services.AddApplicationRegister();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
